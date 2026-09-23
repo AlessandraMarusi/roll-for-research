@@ -1,6 +1,6 @@
-
-import { Button } from "../../components/Button/Button";
-import styles from "./Sidebar.module.css";
+import { Button } from '../../components/Button/Button';
+import { NavItem } from '../../components/NavItem/NavItem';
+import styles from './Sidebar.module.css';
 
 export function Sidebar() {
   return (
@@ -17,17 +17,9 @@ export function Sidebar() {
       </div>
 
       <nav className={styles.navigation} aria-label="Main navigation">
-        <Button variant="ghost" className={styles.navigationItem}>
-          Workspace
-        </Button>
+        <NavItem href="/workspace">My Documents</NavItem>
 
-        <Button variant="ghost" className={styles.navigationItem}>
-          Collections
-        </Button>
-
-        <Button variant="ghost" className={styles.navigationItem}>
-          Documents
-        </Button>
+        <NavItem href="/collections">Ai Generated Docs</NavItem>
       </nav>
 
       <div className={styles.footer}>
