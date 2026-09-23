@@ -1,21 +1,21 @@
 :root {
-    /* #region THE TAVERN THEME */
+  /* #region THE TAVERN THEME */
 
-     /* #region Colors: Background  */
+  /* #region Colors: Background  */
   --color-background: #171310;
   --color-surface: #211b16;
   --color-surface-elevated: #2b231c;
   --color-surface-hover: #30271f;
   /* #endregion Colors: Background  */
   
-     /* #region Colors: Border ---------- */
+  /* #region Colors: Border ---------- */
 
   --color-border: #493a2b;
   --color-border-subtle: #332a21;
   --color-border-strong: #604b38;
   /* #endregion Colors: Border ---------- */
   
-     /* #region Colors: Text ---------- */
+  /* #region Colors: Text ---------- */
 
   --color-text-primary: #e8ddc8;
   --color-text-secondary: #b9aa91;
@@ -23,7 +23,7 @@
   --color-text-inverse: #171310;
   /* #endregion Colors: Text ---------- */
 
-     /* #region Colors: Accent ---------- */
+  /* #region Colors: Accent ---------- */
 
   --color-accent: #c08a3e;
   --color-accent-hover: #d39b4a;
@@ -31,7 +31,7 @@
   --color-accent-foreground: #171310;
     /* #endregion Colors: Accent ---------- */
   
-    /* #region Colors: Semantic ---------- */
+  /* #region Colors: Semantic ---------- */
 
   --color-success: #718a5a;
   --color-warning: #c08a3e;
@@ -39,7 +39,7 @@
   --color-info: #607d8b;
   /* #endregion Colors: Semantic ---------- */
 
-     /* #region TYPOGRAPHY */
+  /* #region TYPOGRAPHY */
 
   --font-sans:
     Inter,
@@ -63,7 +63,7 @@
   --line-height-relaxed: 1.7;
   /* #endregion TYPOGRAPHY */
 
-     /* #region SPACING */
+  /* #region SPACING */
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -77,7 +77,7 @@
   --space-16: 4rem;
   /* #endregion SPACING */
 
-     /* #region RADIUS */
+  /* #region RADIUS */
 
   --radius-sm: 0.25rem;
   --radius-md: 0.375rem;
@@ -86,7 +86,7 @@
   --radius-full: 9999px;
   /* #endregion RADIUS */
 
-    /* #region SHADOWS */
+  /* #region SHADOWS */
 
   --shadow-sm:
     0 1px 2px rgb(0 0 0 / 0.2);
@@ -98,7 +98,7 @@
     0 12px 32px rgb(0 0 0 / 0.3);
   /* #endregion SHADOWS */
 
-     /* #region LAYOUT */
+  /* #region LAYOUT */
 
   --sidebar-width: 15rem;
   --right-panel-width: 22rem;
@@ -106,8 +106,7 @@
   --content-max-width: 72rem;
   /* #endregion LAYOUT */
 
-    /* #region TRANSITIONS */
-
+  /* #region TRANSITIONS */
   --transition-fast: 120ms ease;
   --transition-normal: 180ms ease;
   --transition-slow: 280ms ease;
