@@ -1,15 +1,18 @@
-import { AppShell } from "./AppShell/AppShell";
-
+import { DocumentList } from '../features/documents/DocumentList/DocumentList';
+import { mockDocuments } from '../features/documents/mockDocuments';
+import { AppShell } from './AppShell/AppShell';
 
 function App() {
   return (
     <AppShell>
       <div
         style={{
-          padding: "var(--space-8)",
+          padding: 'var(--space-8)',
         }}
       >
-        <h1>Welcome to Roll for Research</h1>
+        <h1>My Documents</h1>
+
+        <DocumentList documents={mockDocuments} />
       </div>
     </AppShell>
   );
