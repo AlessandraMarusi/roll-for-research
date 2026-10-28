@@ -4,7 +4,7 @@ export const mockDocuments: Document[] = [
   {
     id: "1",
     title: "Session 4 Notes",
-    content: "...",
+    content: "Gattini",
 
     createdAt: "2026-09-20",
     updatedAt: "2026-09-23",

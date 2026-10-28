@@ -1,0 +1,124 @@
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding: var(--space-8);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.title {
+  margin: 0;
+
+  color: var(--color-text-primary);
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  line-height: var(--line-height-tight);
+}
+
+.description {
+  margin: var(--space-2) 0 0;
+
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-md);
+}
+
+.count {
+  flex-shrink: 0;
+  padding: var(--space-2) var(--space-3);
+
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-full);
+
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.toolbar {
+  display: flex;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.searchInput,
+.typeSelect {
+  min-height: 2.5rem;
+  padding: 0 var(--space-3);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+
+  font: inherit;
+  font-size: var(--font-size-sm);
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 0;
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-muted);
+}
+
+.searchInput:focus-visible,
+.typeSelect:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.typeSelect {
+  cursor: pointer;
+}
+
+.emptyState {
+  padding: var(--space-12) var(--space-4);
+
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+
+  text-align: center;
+}
+
+.emptyState h2 {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-lg);
+}
+
+.emptyState p {
+  margin: var(--space-2) 0 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+
+@media (max-width: 600px) {
+  .page {
+    padding: var(--space-4);
+  }
+
+  .header {
+    flex-direction: column;
+  }
+    .toolbar {
+    flex-direction: column;
+  }
+
+  .typeSelect {
+    width: 100%;
+  }
+}

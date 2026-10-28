@@ -1,19 +1,10 @@
-import { DocumentList } from '../features/documents/DocumentList/DocumentList';
-import { mockDocuments } from '../features/documents/mockDocuments';
+import { MyDocumentsPage } from '../features/documents/pages/MyDocumentsPage';
 import { AppShell } from './AppShell/AppShell';
 
 function App() {
   return (
     <AppShell>
-      <div
-        style={{
-          padding: 'var(--space-8)',
-        }}
-      >
-        <h1>My Documents</h1>
-
-        <DocumentList documents={mockDocuments} />
-      </div>
+      <MyDocumentsPage />
     </AppShell>
   );
 }
