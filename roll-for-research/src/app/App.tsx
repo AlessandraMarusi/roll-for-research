@@ -1,5 +1,5 @@
-import { MyDocumentsPage } from '../features/documents/pages/MyDocumentsPage';
 import { AppShell } from './AppShell/AppShell';
+import { MyDocumentsPage } from '../features/documents/MyDocumentsPage/MyDocumentsPage';
 
 function App() {
   return (

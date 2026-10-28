@@ -3,8 +3,8 @@ import type { Document } from './document';
 export const mockDocuments: Document[] = [
   {
     id: "1",
-    title: "Session 4 Notes",
-    content: "Gattini",
+    title: "Sessione 4 Note",
+    content: "La sessione si apre drammaticamente: il party si trova nel famigerato Covo del Sotto-Divano, un territorio controllato dalla temibile gilda criminale dei Cani Randagi. L'obiettivo della missione è recuperare il leggendario Laser Rosso Eterno, un artefatto in grado di ipnotizzare qualsiasi felino.",
 
     createdAt: "2026-09-20",
     updatedAt: "2026-09-23",
@@ -20,7 +20,7 @@ export const mockDocuments: Document[] = [
 
   {
     id: "2",
-    title: "AI Summary - Session 4",
+    title: "AI Summary - Sessione 4",
     content: "...",
 
     createdAt: "2026-09-23",

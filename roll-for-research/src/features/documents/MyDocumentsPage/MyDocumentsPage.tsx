@@ -3,11 +3,15 @@ import { DocumentList } from '../DocumentList/DocumentList';
 import { mockDocuments } from '../mockDocuments';
 import type { DocumentType } from '../document';
 import styles from './MyDocumentsPage.module.css';
+import { DocumentViewer } from '../DocumentViewer/DocumentViewer';
 
 export function MyDocumentsPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const [selectedType, setSelectedType] = useState<DocumentType | 'all'>('all');
+  const [selectedDocumentId, setSelectedDocumentId] = useState<string | null>(
+    null,
+  );
 
   const normalizedQuery = searchQuery.trim().toLowerCase();
 
@@ -21,6 +25,10 @@ export function MyDocumentsPage() {
 
     return matchesQuery && matchesType;
   });
+
+  const selectedDocument =
+    mockDocuments.find((document) => document.id === selectedDocumentId) ??
+    null;
   return (
     <section className={styles.page}>
       <header className={styles.header}>
@@ -58,16 +66,26 @@ export function MyDocumentsPage() {
           <option value="ai-summary">AI summaries</option>
         </select>
       </div>
-      {filteredDocuments.length > 0 ? (
-        <DocumentList documents={filteredDocuments} />
-      ) : (
-        <div className={styles.emptyState}>
-          <h2>No documents found</h2>
-          <p>
-            Try changing your search or selecting a different document type.
-          </p>
-        </div>
-      )}
+
+      <div className={styles.contentLayout}>
+        <section className={styles.documentsPanel} aria-label="Documents">
+          {filteredDocuments.length > 0 ? (
+            <DocumentList
+              documents={filteredDocuments}
+              selectedDocumentId={selectedDocumentId}
+              onSelectDocument={setSelectedDocumentId}
+            />
+          ) : (
+            <div className={styles.emptyState}>
+              <p>No documents match your search.</p>
+            </div>
+          )}
+        </section>
+
+        <section className={styles.viewerPanel} aria-label="Document preview">
+          <DocumentViewer document={selectedDocument} />
+        </section>
+      </div>
     </section>
   );
 }
